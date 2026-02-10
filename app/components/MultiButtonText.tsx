@@ -1,27 +1,37 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 function MultiButtonText() {
-  const [message, setMessage] = useState("Click a button");
-
-  const handleClick = (text: React.SetStateAction<string>) => {
-    setMessage(text);
-  };
+  const [message, setMessage] = useState("Click a button !");
 
   return (
-    <div>
+    <div style={{ padding: 20 }}>
       <h2>{message}</h2>
+ 
+      <Stack direction="row" spacing={2}>
+        <Button
+          variant="contained"
+          onClick={() => setMessage("Button 1 clicked")}
+        >
+          Button 1
+        </Button>
 
-      <button onClick={() => handleClick("You clicked Button 1")}>
-        Button 1
-      </button>
+        <Button
+          variant="outlined"
+          onClick={() => setMessage("Button 2 clicked")}
+        >
+          Button 2
+        </Button>
 
-      <button onClick={() => handleClick("You clicked Button 2")}>
-        Button 2
-      </button>
-
-      <button onClick={() => handleClick("You clicked Button 3")}>
-        Button 3
-      </button>
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => setMessage("Button 3 clicked")}
+        >
+          Button 3
+        </Button>
+      </Stack>
     </div>
   );
 }
