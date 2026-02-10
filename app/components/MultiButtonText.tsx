@@ -31,6 +31,14 @@ function MultiButtonText() {
         >
           Button 3
         </Button>
+
+         <Button
+          variant="contained"
+          color="success"
+          onClick={() => setMessage("Button 4 clicked")}
+        >
+          Button 4
+        </Button>
       </Stack>
     </div>
   );
