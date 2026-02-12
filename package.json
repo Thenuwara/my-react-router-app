@@ -7,7 +7,7 @@
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "test": "jest",
+    "test": "jest --json --outputFile=test-results.json",
     "test:coverage": "jest --coverage --json --outputFile=coverage.json"
   },
   "dependencies": {
